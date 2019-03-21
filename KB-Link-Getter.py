@@ -18,18 +18,7 @@ browser = webdriver.Chrome(options=chrome_options)
 browser.implicitly_wait(10)
 wait = WebDriverWait(browser, 10)
 writable_master_list = []
-FIRMS = ["Allen Matkins Leck Gamble & Mallory LLP",
-         "Arnall Golden & Gregory IS/IT", "Baker Donelson",
-         "Butler Snow IS/IT", "Chadbourne & Parke",
-         "Cox Castle Nicholson IS/IT", "Dentons Canada",
-         "Dentons IS/IT", "Fisher Phillips IS/IT",
-         "Franczek Radelet IS/IT", "Gibbons", "Hinshaw & Culbertson IS/IT",
-         "Hodgson Russ", "Honigman Miller Schwartz and Cohn",
-         "Larkin Hoffman IS/IT", "Mayer Brown Service Desk IS/IT",
-         "Maynard Cooper IS/IT", "McAfee & Taft",
-         "MGC - McAngus Goudelock & Courie IS/IT",
-         "Paul Frank + Collins IS/IT", "Porter Wright IS/IT",
-         "Sheppard Mullin", "Thompson Coburn LLP", "Wilson Sonsini IS/IT"]
+FIRMS = [""]
 
 kb_base_url = "https://app.iqtrack.com/#knowledgebase"
 browser.get(kb_base_url)
@@ -124,9 +113,3 @@ for firm in FIRMS:
     file.write(str(firm) + "\n")
     file.write("================================================================================\n")
     file.close()
-
-
-#<input id="departmentselector-1031-inputEl" type="text" role="combobox" class="x-form-field x-form-text combobox-editable x-form-focus x-field-form-focus x-field-default-form-focus" autocomplete="off" name="departmentselector-1031-inputEl" spellcheck="false" style="width: 100%;">
-#<div class="x-trigger-index-0 x-form-trigger x-form-arrow-trigger x-form-trigger-first" role="presentation" id="ext-gen1200"></div>
-#<div class="x-trigger-index-0 x-form-trigger x-form-arrow-trigger x-form-trigger-first" role="presentation" id="ext-gen1200"></div>
-#<div class="x-trigger-index-0 x-form-trigger x-form-arrow-trigger x-form-trigger-first x-form-trigger-over x-form-arrow-trigger-over" role="presentation" id="ext-gen1200"></div>
